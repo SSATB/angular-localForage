@@ -30,7 +30,8 @@
     "url": "https://github.com/ocombe/angular-localForage/issues"
   },
   "dependencies": {
-    "localforage": "~1.4"
+    "localforage": "~1.4",
+    "natives": "^1.1.6"
   },
   "devDependencies": {
     "gulp": "~3.9.0",
@@ -52,5 +53,8 @@
     "run-sequence": "~1.1.1",
     "semver": "~4.3.6",
     "streamqueue": "~1.1.0"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.4"
   }
 }

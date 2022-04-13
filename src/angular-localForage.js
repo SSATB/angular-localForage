@@ -6,13 +6,16 @@
     define(['localforage'], function(localforage) {
       return factory(angular, localforage);
     });
-  } else if(typeof exports === 'object' || typeof global === 'object') {
-    if(typeof module === 'undefined') {
-      global.module.exports = factory(angular, require('localforage')); // NW.js
-    } else {
-      module.exports = factory(angular, require('localforage')); // Node/Browserify
-    }
-  } else {
+  }
+  //commenting this in forked 1.3.8 version for using only browser code because module is undefined and reaches to NW.js version
+  //else if (typeof exports === 'object' || typeof global === 'object') {
+  //  if(typeof module === 'undefined') {
+  //    global.module.exports = factory(angular, require('localforage')); // NW.js
+  //  } else {
+  //    module.exports = factory(angular, require('localforage')); // Node/Browserify
+  //  }
+  //}
+  else {
     return factory(angular, root.localforage);                        // Browser
   }
 })(this, function(angular, localforage, undefined) {
